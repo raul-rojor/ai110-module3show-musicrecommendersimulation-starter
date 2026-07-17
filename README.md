@@ -29,6 +29,8 @@ Some prompts to answer:
 
 You can include a simple diagram or bullet list if helpful.
 
+Streaming platforms combine content-based and collaborative filtering in order to recommend media to users. Collaborative filtering recommends media based on similar users' liked content which the user hasn't viewed yet, while content-based filtering recommends media based on content matching the user's past content preferences. My recommendation model uses content-based filtering since a user database which allows mutliple users to be stored and compared is not included. Each song in my system and user profile has genre, acousticness, energt, mood, danceability, valence, and tempo features to be used for song scoring relative to users. The recommender computes target feature values based on the user's preferences and then scores the closeness of songs' features to the target values. Then, weights are applied to the normalized closeness scores based on feature importance and are then added. Finally, the songs with the highest scores are recommended first to the user.
+
 ---
 
 ## Getting Started
