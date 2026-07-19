@@ -393,6 +393,8 @@ Use this section to document the experiments you ran. For example:
 - What happened when you added tempo or valence to the score
 - How did your system behave for different types of users
 
+When I halved the weight of genre and made up for the gap in feature weights by uniformly multiplying the other features' weights I noticed that the recommender became more responsive to user preferences in other features and would recommend be less picky in what song genres to push to users. I think this change may be very useful for users seeking to not just find songs they are most likely to enjoy, but songs from potentially other genres which they are likely to enjoy. Thus, I think it could prove to be the basis of a second possible recommender that can be implemented into a song-streaming service. The current recommender could be more of a 'sure-shot' algorithm that pushes the songs which users are the most likely to like overall, while this altered recommender could be more of an 'experimental recommendations' recommender that pushes songs to users which they are likely to enjoy from a type of music they may be less familiar with.
+
 ---
 
 ## Limitations and Risks
@@ -406,6 +408,8 @@ Examples:
 - It might over favor one genre or mood
 
 You will go deeper on this in your model card.
+
+The recommender requires exact genre matches while weighs this category heavily, doesn't take complicated ways to categorize music into consideration (such as a user's preferred lyrical themes or their cultural perspective on music), and has trouble finding music for niche tastes unless the tastes are well refected in the song catalog.
 
 ---
 
