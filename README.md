@@ -11,7 +11,7 @@ Your goal is to:
 - Evaluate what your system gets right and wrong
 - Reflect on how this mirrors real world AI recommenders
 
-Replace this paragraph with your own summary of what your version does.
+My recommender collects a user's preferences in qualitative and quantitative measures and matches them with the songs most corresponding to their taste. This is done by scoring songs based on the similarity between it's music features and those preferred by the user and then applying different weights to those music features and thus to their respective scores. The highest scoring songs relative to the user's taste are recommended in descending order to them.
 
 ---
 
@@ -78,6 +78,20 @@ pytest
 ```
 
 You can add more tests in `tests/test_recommender.py`.
+
+# FINAL TESTS RESULTS:
+
+============================================================================ test session starts =============================================================================
+platform darwin -- Python 3.13.13, pytest-9.1.1, pluggy-1.6.0
+rootdir: /Users/rrn/ai110-module3show-musicrecommendersimulation-starter
+configfile: pytest.ini
+testpaths: tests
+plugins: anyio-4.14.1
+collected 24 items                                                                                                                                                           
+
+tests/test_recommender.py ........................                                                                                                                     [100%]
+
+============================================================================= 24 passed in 0.04s =============================================================================
 
 ---
 
@@ -424,6 +438,8 @@ Write 1 to 2 paragraphs here about what you learned:
 - about how recommenders turn data into predictions
 - about where bias or unfairness could show up in systems like this
 
+Recommenders analyze context (liked media) provided by the user's profile to predict other media the user may enjoy. Additionally, contecxt is provided by the liked media of other user profiles since streaming platforms rely on a database of millions of users. Thus, I see why streaming platforms better recommend music when you've interacted more with the platform and when more people in total have as well because it provides context for the recommender's predictions. These recommenders then have to best define how to weigh and organize this context in order to manipulate it and output predictions. This part is the most tedious and requires vast testing of recommender algorithm changes.
 
+Bias and unfairness can easily creep into recommendation systems if they are designed incorrectly or if they suffer from too little prediction context. If the system doesn't have access to a large amount of user preference information, then predictions become less conditional and therefore less precise. Additionally, are more likely the problem for a platform with a large amount of users, a recommendation algorithm that doesn't address complicated music tastes can generate off-putting recommendation for users and risk a decrease in user activity/retention. If the system isn't sufficiently complex, then capturing the nuance in user preferences becomes impossible. Alternatively, when systems become more complex, they are more difficult to effectively redesign in positive directions in order to address insufficiencies in recommendations. Thus, programers have to be constantly vigilant of their recommender's logic and the quality of it's outputs.
 
 

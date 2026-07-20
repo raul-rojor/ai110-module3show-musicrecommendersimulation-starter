@@ -112,6 +112,8 @@ Prompts:
 - Improving diversity among the top results  
 - Handling more complex user tastes  
 
+I would improve the model by first adding a much longer song catalog that would reflect a real streaming platforms catalog size. This would help to test the recommender in a real-world setting, potentially handling the issue of niche or complex user tastes. Besides that, I would construct multiple music taste profiles for each user (maybe with a weight of these different profiles in choosing what songs to recommend overall)since a user may like many contradicting music styles at the same time. Finally, I would add an option for the user to choose how experimental trelative to their own taste they would want their song recommendations to be.
+
 ---
 
 ## 9. Personal Reflection  
@@ -122,4 +124,6 @@ Prompts:
 
 - What you learned about recommender systems  
 - Something unexpected or interesting you discovered  
-- How this changed the way you think about music recommendation apps  
+- How this changed the way you think about music recommendation apps 
+
+I learned that recommender systems have to balance a myriad of tradeoffs and are therefore encouraged to be complex. I now understand why recommender systems in real platforms tend to use deep learning algorithm to push recommendations to users. Without these complicated models, recommendations are more likely to miss the nuance inherent to user preferences. It is therefore clear to me now how music recommenders are very possibly well represented or even implemented as prediction models just like large language models where the best-fitting embedding (token) is chosen from past embeddings (tokens) as context. This makes me wonder if songs and user preferences can be embedded to be turned into vectors and similarities can then be calculated. If so, I wonder if streaming platforms employ this technique, especially with the recent advancements in large-language and multimodal AI models.
